@@ -11,7 +11,7 @@ package lab1;
  */
 public class College {
     private DepartmentOfItStudies itStudies;
-    PrintService printServ;
+    private PrintService printServ;
     
     public College(){
     itStudies = new DepartmentOfItStudies();

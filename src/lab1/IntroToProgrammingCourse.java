@@ -15,9 +15,15 @@ public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
         
     }
     
-    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits, boolean prereq) {
-        super(courseName,courseNumber, credits, prereq);
-    }
+//    public IntroToProgrammingCourse(String courseName, String courseNumber, double credits, boolean prereq) {
+//        super(courseName,courseNumber, credits, prereq);
+//    }
+//   
    
-   
+     private PrintService printService = new PrintService();
+     
+       @Override
+    public void setPrerequisites(String prerequisites) {
+        
+       }
 }
