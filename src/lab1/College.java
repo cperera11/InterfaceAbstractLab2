@@ -38,17 +38,17 @@ public class College {
     }
 
     public void setSemesterInventory() {
-        semesterInventory.setSemesterInventory("\nCourse Name:" + introToProgramming.getCourseName()
+        semesterInventory.setItSemesterInventory("\nCourse Name:" + introToProgramming.getCourseName()
                 + "\n\tCourse Number: " + introToProgramming.getCourseNumber()
                 + "\n\tCourse Credits: " + introToProgramming.getCredits()
                 + "\n\tCourse Prerequisites: " + introToProgramming.getPrerequisites());
 
-        semesterInventory.setSemesterInventory("\n\nCourse Name:" + introToJava.getCourseName()
+        semesterInventory.setItSemesterInventory("\n\nCourse Name:" + introToJava.getCourseName()
                 + "\n\tCourse Number: " + introToJava.getCourseNumber()
                 + "\n\tCourse Credits: " + introToJava.getCredits()
                 + "\n\tCourse Prerequisites: " + introToJava.getPrerequisites());
 
-        semesterInventory.setSemesterInventory("\n\nCourse Name:" + advancedJava.getCourseName()
+        semesterInventory.setItSemesterInventory("\n\nCourse Name:" + advancedJava.getCourseName()
                 + "\n\tCourse Number: " + advancedJava.getCourseNumber()
                 + "\n\tCourse Credits: " + advancedJava.getCredits()
                 + "\n\tCourse Prerequisites: " + advancedJava.getPrerequisites());
@@ -57,7 +57,7 @@ public class College {
 
     public void printReport() {
         setSemesterInventory();
-        printService.printReport(semesterInventory.getINVENTORY_MSG() + "\n" + semesterInventory.getSemesterInventory());
+        printService.printReport(semesterInventory.getINVENTORY_MSG() + "\n" + semesterInventory.getItSemesterInventory());
     }
 
 }

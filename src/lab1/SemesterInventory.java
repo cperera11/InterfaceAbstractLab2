@@ -11,19 +11,40 @@ package lab1;
  */
 public class SemesterInventory {
 
-    private String semesterInventory;
+    private String itSemesterInventory;
+    private String businessSemesterInventory;
+    private String healthSemesterInventory;
+    
     private final String INVENTORY_MSG = "Course details have been added to the semester inventory ";
+    
 
-    public String getSemesterInventory() {
-        return semesterInventory;
+    public String getItSemesterInventory() {
+        return itSemesterInventory;
     }
 
-    public void setSemesterInventory(String semesterInventory) {
-        this.semesterInventory += semesterInventory;
+    public void setItSemesterInventory(String semesterInventory) {
+        this.itSemesterInventory += semesterInventory;
     }
 
     public String getINVENTORY_MSG() {
         return INVENTORY_MSG;
     }
+
+    public String getBusinessSemesterInventory() {
+        return businessSemesterInventory;
+    }
+
+    public void setBusinessSemesterInventory(String businessSemesterInventory) {
+        this.businessSemesterInventory = businessSemesterInventory;
+    }
+
+    public String getHealthSemesterInventory() {
+        return healthSemesterInventory;
+    }
+
+    public void setHealthSemesterInventory(String healthSemesterInventory) {
+        this.healthSemesterInventory = healthSemesterInventory;
+    }
+    
 
 }
