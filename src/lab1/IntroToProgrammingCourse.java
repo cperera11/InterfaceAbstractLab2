@@ -13,11 +13,11 @@ public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
     
    
     
-     public IntroToProgrammingCourse(String courseName, String courseNumber, String credits, String p) {
+     public IntroToProgrammingCourse(String courseName, String courseNumber, String credit, String prereqs) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
-        setCredits(credits);
-        setCredits(p);
+        setCredits(credit);
+        setPrerequisites(prereqs);
       }
    
    

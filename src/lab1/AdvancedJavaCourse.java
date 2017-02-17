@@ -11,9 +11,11 @@ public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
     private String prerequisites;
     private PrintService printService = new PrintService();
     
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
+    public AdvancedJavaCourse(String courseName, String courseNumber, String credit, String prereqs) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
+        setCredits(credit);
+        setPrerequisites(prereqs);
       }
             
     @Override

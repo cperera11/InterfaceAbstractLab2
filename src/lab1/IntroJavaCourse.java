@@ -13,9 +13,11 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
     private String prerequisites;
     private PrintService printService = new PrintService();
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
+    public IntroJavaCourse(String courseName, String courseNumber, String credit, String prereqs) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
+        setCredits(credit);
+        setPrerequisites(prereqs);
        
     }
  public IntroJavaCourse() {

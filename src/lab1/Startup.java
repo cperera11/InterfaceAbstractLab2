@@ -11,40 +11,27 @@ package lab1;
  */
 public class Startup {
     public static void main(String[] args) {
-    College wctc = new College("java","5432","4.0","");
-    wctc.printReport();
+        
+    College wctc = new College();
     
-//   ObjectOrientedProgramingCourse introPro = new IntroToProgrammingCourse();
-//   ObjectOrientedProgramingCourse introJava = new IntroJavaCourse();
-//   ObjectOrientedProgramingCourse advanceJava = new AdvancedJavaCourse();
-    
-//    introPro.setCourseName("Intro to Programming");
-//    introPro.setCourseNumber("4356");
-//    introPro.setCredits(2.0);
-//    introPro.setPrerequisites(false);
-    
-//    wctc.printServ.printReport("course name has been added to the semester inventory "+ "\nCourse Name:" 
-//            + introPro.getCourseName() + "\tCourse Number: "+ introPro.getCredits()+ "\tCourse Prerequisites: "
-//            + introPro.getCoursePrerequisites(""));
-//   
-//   
-//    introJava.setCourseName("Intro to Java");
-//    introJava.setCourseNumber("5436");
-//    introJava.setCredits(4.0);
-//    introJava.setPrerequisites(true);
-//    introJava.getCoursePrerequisites("Intro to Programming");
-//    wctc.printServ.printReport("course name has been added to the semester inventory "+ "\nCourse Name:" 
-//            + introJava.getCourseName() + "\tCourse Number: "+ introJava.getCredits()
-//            + "\tCourse Prerequisites: "+ introJava.getCoursePrerequisites(""));
-//    
-//    advanceJava.setCourseName("Advanced Java");
-//    advanceJava.setCourseNumber("9863");
-//    advanceJava.setCredits(4.0);
-//    advanceJava.setPrerequisites(true);
-//    advanceJava.getCoursePrerequisites("Intro to Java");
-//    wctc.printServ.printReport("course name has been added to the semester inventory "+ "\nCourse Name:" 
-//            + advanceJava.getCourseName() + "\tCourse Number: "+ advanceJava.getCredits()
-//            + "\tCourse Prerequisites: "+ advanceJava.getCoursePrerequisites(""));
+   wctc.setIntroPro("Intro to Programming", "5674-98", "2", "prerequisites");
+   wctc.setIntroJava("Intro to Java", "654-8766", "4", "prerequisites");
+   wctc.setAdvancedJava("Advanced Java", "765-98", "4", "prerequisites");
    
+    //wctc.printReport();
+    
+    College matc = new College();
+   matc.setIntroPro("Intro to Programming", "5674-98", "2", "prerequisites");
+   matc.setIntroJava("Intro to Java", "654-8766", "4", "prerequisites");
+   matc.setAdvancedJava("Advanced Java", "765-98", "4", "prerequisites");
+   
+    //matc.printReport();
+    
+    College[] college = {wctc,matc};
+    
+    for(College col:college){
+    col.printReport();
+    }
+
 }
 }
