@@ -10,12 +10,16 @@ public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
     
     private String prerequisites;
     private PrintService printService = new PrintService();
+    
 //    public AdvancedJavaCourse(String courseName, String courseNumber, double credits, boolean prereq) {
 //        super(courseName,courseNumber, credits, prereq);
 //    }
-    public AdvancedJavaCourse() {
-        
-    }
+    
+    public AdvancedJavaCourse(String courseName, String courseNumber) {
+        setCourseName(courseName);
+        setCourseNumber(courseNumber);
+      }
+            
     public String getPrerequisites() {
         return prerequisites;
     }

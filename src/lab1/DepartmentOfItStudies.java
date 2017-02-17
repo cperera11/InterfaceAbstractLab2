@@ -13,11 +13,11 @@ public class DepartmentOfItStudies {
     private ObjectOrientedProgramingCourse oopCourse ;
     private String itSemesterInventory;
     
-   public DepartmentOfItStudies(){
-     oopCourse = new IntroToProgrammingCourse();
-     oopCourse = new IntroJavaCourse();
-     oopCourse = new AdvancedJavaCourse();
-  }
+//   public DepartmentOfItStudies(){
+//     oopCourse = new IntroToProgrammingCourse();
+//     oopCourse = new IntroJavaCourse();
+//     oopCourse = new AdvancedJavaCourse();
+//  }
     
     
 }
