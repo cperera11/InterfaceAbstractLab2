@@ -7,7 +7,7 @@ package lab1;
 
 /**
  *
- * @author CPere
+ * @author Chathuri Perera
  */
 public class SemesterInventory {
 

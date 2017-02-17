@@ -7,17 +7,19 @@ package lab1;
 
 /**
  *
- * @author CPere
+ * @author Chathuri Perera
  */
 public class College {
 
+    private String collegeName;
     private ObjectOrientedProgramingCourse introToProgramming;
     private ObjectOrientedProgramingCourse introToJava;
     private ObjectOrientedProgramingCourse advancedJava;
-    public PrintService printService;
+    private PrintService printService;
     private SemesterInventory semesterInventory;
 
-    public College() {
+    public College(String collegeName) {
+        setCollegeName(collegeName);
         printService = new PrintService();
         semesterInventory = new SemesterInventory();
     }
@@ -38,7 +40,7 @@ public class College {
     }
 
     public void setSemesterInventory() {
-        semesterInventory.setItSemesterInventory("\nCourse Name:" + introToProgramming.getCourseName()
+        semesterInventory.setItSemesterInventory("\n"+"Course Name:" + introToProgramming.getCourseName()
                 + "\n\tCourse Number: " + introToProgramming.getCourseNumber()
                 + "\n\tCourse Credits: " + introToProgramming.getCredits()
                 + "\n\tCourse Prerequisites: " + introToProgramming.getPrerequisites());
@@ -57,7 +59,18 @@ public class College {
 
     public void printReport() {
         setSemesterInventory();
-        printService.printReport(semesterInventory.getINVENTORY_MSG() + "\n" + semesterInventory.getItSemesterInventory());
+        printService.printReport(semesterInventory.getINVENTORY_MSG() +" of " + getCollegeName() + "\n" 
+                                    + semesterInventory.getItSemesterInventory());
     }
+
+    public String getCollegeName() {
+        return collegeName;
+    }
+
+    public void setCollegeName(String collegeName) {
+        this.collegeName = collegeName;
+    }
+    
+    
 
 }

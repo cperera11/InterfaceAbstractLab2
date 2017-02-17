@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author CPere
+ * @author Chathuri Perera
  */
 public abstract class ObjectOrientedProgramingCourse {
 

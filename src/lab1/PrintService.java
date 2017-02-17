@@ -9,7 +9,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author CPere
+ * @author Chathuri Perera
  */
 public class PrintService {
 
@@ -25,8 +25,7 @@ public class PrintService {
 
     public void printReport(String text) {
         setReport(text);
-        JOptionPane.showMessageDialog(null,
-                getReport());
+        JOptionPane.showMessageDialog(null, getReport());
     }
 
 }

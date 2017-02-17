@@ -3,12 +3,13 @@ package lab1;
 /**
  * Describe responsibilities here.
  *
- * @author your name goes here
+ * @author Chathuri Perera
  * @version 1.00
  */
 public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
 
     private String prerequisites;
+    private int numberOfProjects;
     private PrintService printService = new PrintService();
 
     public AdvancedJavaCourse(String courseName, String courseNumber, String credit, String prereqs) {
@@ -33,4 +34,13 @@ public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
 
         this.prerequisites = prerequisites;
     }
+
+    public int getNumberOfProjects() {
+        return numberOfProjects;
+    }
+
+    public void setNumberOfProjects(int numberOfProjects) {
+        this.numberOfProjects = numberOfProjects;
+    }
+
 }

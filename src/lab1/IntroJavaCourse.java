@@ -5,12 +5,13 @@ package lab1;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Chathuri Perera
  * @version     1.00
  */
 public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
 
     private String prerequisites;
+    private int numberOfExams;
     private PrintService printService = new PrintService();
 
     public IntroJavaCourse(String courseName, String courseNumber, String credit, String prereqs) {
@@ -35,5 +36,14 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
            
        this.prerequisites = prerequisites;
     }
+
+    public int getNumberOfExams() {
+        return numberOfExams;
+    }
+
+    public void setNumberOfExams(int numberOfExams) {
+        this.numberOfExams = numberOfExams;
+    }
+    
       
 }
