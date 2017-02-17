@@ -18,17 +18,13 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
         setCourseNumber(courseNumber);
         setCredits(credit);
         setPrerequisites(prereqs);
-       
     }
- public IntroJavaCourse() {
-        
-    }
+ 
     @Override
    public String getPrerequisites() {
         return prerequisites;
     }
 
-   
     @Override
     public void setPrerequisites(String prerequisites) {
         
@@ -39,6 +35,5 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
            
        this.prerequisites = prerequisites;
     }
-
       
 }

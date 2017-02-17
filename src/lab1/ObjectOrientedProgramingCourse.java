@@ -17,14 +17,13 @@ public abstract class ObjectOrientedProgramingCourse {
     private String courseNumber;
     private double credits;
     private PrintService printService = new PrintService();
-    
+
     private final String IAEXCEPTION_MSG = "Value Entered Does Not Match the Format of the Field";
 
+    public abstract void setPrerequisites(String prerequisites);
 
-    
-      public abstract void setPrerequisites(String prerequisites);
-      public abstract String getPrerequisites();
-          
+    public abstract String getPrerequisites();
+
     public void setCourseNumber(String courseNumber) {
         if (courseNumber == null || courseNumber.length() == 0) {
             printService.printReport("Error: courseNumber cannot be null of empty string");
@@ -50,7 +49,6 @@ public abstract class ObjectOrientedProgramingCourse {
         this.courseName = courseName;
     }
 
-
     public String getCourseName() {
         return courseName;
     }
@@ -66,6 +64,5 @@ public abstract class ObjectOrientedProgramingCourse {
     public String getIAEXCEPTION_MSG() {
         return IAEXCEPTION_MSG;
     }
-
 
 }

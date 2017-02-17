@@ -12,6 +12,7 @@ import javax.swing.JOptionPane;
  * @author CPere
  */
 public class PrintService {
+
     private String report;
 
     public String getReport() {
@@ -21,13 +22,11 @@ public class PrintService {
     public void setReport(String text) {
         this.report += text;
     }
-    
-   
-    public void printReport(String text){
+
+    public void printReport(String text) {
         setReport(text);
-     JOptionPane.showMessageDialog(null,
-                    getReport());
+        JOptionPane.showMessageDialog(null,
+                getReport());
     }
-    
-    
+
 }
