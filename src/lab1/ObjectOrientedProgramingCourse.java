@@ -17,34 +17,35 @@ public abstract class ObjectOrientedProgramingCourse {
     private String courseNumber;
     private double credits;
     private PrintService printService = new PrintService();
+    
+    private final String IAEXCEPTION_MSG = "Value Entered Does Not Match the Format of the Field";
 
 
-     public ObjectOrientedProgramingCourse() {
-       
-    }
+    
       public abstract void setPrerequisites(String prerequisites);
  
           
     public void setCourseNumber(String courseNumber) {
         if (courseNumber == null || courseNumber.length() == 0) {
             printService.printReport("Error: courseNumber cannot be null of empty string");
-            System.exit(0);
+            throw new IllegalArgumentException(IAEXCEPTION_MSG);
         }
         this.courseNumber = courseNumber;
     }
 
-    public void setCredits(double credits) {
-        if (credits < 0.5 || credits > 4.0) {
-            printService.printReport("Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
+    public void setCredits(String credits) {
+        if (courseNumber == null || courseNumber.length() == 0) {
+            printService.printReport("Error: credits cannot be null of empty");
+            throw new IllegalArgumentException(IAEXCEPTION_MSG);
         }
-        this.setCredits(credits);
+        Double credit = Double.parseDouble(credits);
+        this.credits = credit;
     }
 
     public final void setCourseName(String courseName) {
         if (courseName == null || courseName.length() == 0) {
             printService.printReport("Error: courseName cannot be null of empty string");
-            System.exit(0);
+            throw new IllegalArgumentException(IAEXCEPTION_MSG);
         }
         this.courseName = courseName;
     }
@@ -60,6 +61,10 @@ public abstract class ObjectOrientedProgramingCourse {
 
     public double getCredits() {
         return credits;
+    }
+
+    public String getIAEXCEPTION_MSG() {
+        return IAEXCEPTION_MSG;
     }
 
 

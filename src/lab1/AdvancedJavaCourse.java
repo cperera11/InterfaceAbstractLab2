@@ -11,10 +11,6 @@ public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
     private String prerequisites;
     private PrintService printService = new PrintService();
     
-//    public AdvancedJavaCourse(String courseName, String courseNumber, double credits, boolean prereq) {
-//        super(courseName,courseNumber, credits, prereq);
-//    }
-    
     public AdvancedJavaCourse(String courseName, String courseNumber) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
@@ -28,7 +24,7 @@ public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
         
             if (prerequisites == null || prerequisites.length() == 0) {
                 printService.printReport("Error: courseName cannot be null of empty string");
-                System.exit(0);
+                 throw new IllegalArgumentException(getIAEXCEPTION_MSG());
             }
            
        this.prerequisites = prerequisites;

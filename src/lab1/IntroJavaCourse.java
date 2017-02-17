@@ -31,7 +31,7 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
         
             if (prerequisites == null || prerequisites.length() == 0) {
                 printService.printReport("Error: courseName cannot be null of empty string");
-                System.exit(0);
+                throw new IllegalArgumentException(getIAEXCEPTION_MSG());
             }
            
        this.prerequisites = prerequisites;
