@@ -10,5 +10,13 @@ package lab1;
  * @author CPere
  */
 public class College {
+    private DepartmentOfItStudies itStudies;
+    PrintService printServ;
+    
+    public College(){
+    itStudies = new DepartmentOfItStudies();
+    printServ = new PrintService();
+    } 
+
     
 }

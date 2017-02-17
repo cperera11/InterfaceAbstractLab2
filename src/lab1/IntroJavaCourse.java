@@ -9,25 +9,17 @@ import javax.swing.JOptionPane;
  * @version     1.00
  */
 public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
-    private String prerequisites;
+   // private String prerequisites;
 
-    public IntroJavaCourse(String courseName, String courseNumber) {
-        super(courseName,courseNumber);
+    public IntroJavaCourse(String courseName, String courseNumber, double credits, boolean prereq) {
+        super(courseName,courseNumber, credits, prereq );
     }
-
+ public IntroJavaCourse() {
+        
+    }
    
-    public String getPrerequisites() {
-        return prerequisites;
-    }
 
-    public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
-        }
-        this.prerequisites = prerequisites;
-    }
+
 
       
 }

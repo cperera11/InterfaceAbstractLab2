@@ -1,7 +1,5 @@
 package lab1;
 
-import javax.swing.JOptionPane;
-
 /**
  * Describe responsibilities here.
  *
@@ -10,8 +8,10 @@ import javax.swing.JOptionPane;
  */
 public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
     
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
-        super(courseName,courseNumber);
+    public AdvancedJavaCourse(String courseName, String courseNumber, double credits, boolean prereq) {
+        super(courseName,courseNumber, credits, prereq);
     }
-    
+    public AdvancedJavaCourse() {
+        
+    }
 }
