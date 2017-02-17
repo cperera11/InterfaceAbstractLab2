@@ -16,6 +16,7 @@ public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
         setCourseNumber(courseNumber);
       }
             
+    @Override
     public String getPrerequisites() {
         return prerequisites;
     }

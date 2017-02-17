@@ -13,16 +13,22 @@ public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
     
    
     
-     public IntroToProgrammingCourse(String courseName, String courseNumber) {
+     public IntroToProgrammingCourse(String courseName, String courseNumber, String credits, String p) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
+        setCredits(credits);
+        setCredits(p);
       }
    
    
-     private PrintService printService = new PrintService();
-     
+         
        @Override
     public void setPrerequisites(String prerequisites) {
         
        }
+
+    @Override
+    public String getPrerequisites() {
+        return("No Prerequisites");
+    }
 }

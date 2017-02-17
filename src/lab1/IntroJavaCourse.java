@@ -21,6 +21,7 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
  public IntroJavaCourse() {
         
     }
+    @Override
    public String getPrerequisites() {
         return prerequisites;
     }

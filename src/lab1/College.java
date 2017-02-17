@@ -10,13 +10,15 @@ package lab1;
  * @author CPere
  */
 public class College {
-    private DepartmentOfItStudies itStudies;
-    private PrintService printServ;
+    private DepartmentOfItStudies deptOfItStudies;
+    public PrintService printServ = new PrintService();
     
-    public College(){
-    itStudies = new DepartmentOfItStudies();
+    public College(String courseName, String courseNumber, String credits, String p){
+    deptOfItStudies = new DepartmentOfItStudies(courseName, courseNumber, credits, p);
     printServ = new PrintService();
     } 
-
+    public void printReport(){
+    deptOfItStudies.printReport();
+     }
     
 }

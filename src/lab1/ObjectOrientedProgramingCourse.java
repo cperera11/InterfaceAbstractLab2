@@ -23,7 +23,7 @@ public abstract class ObjectOrientedProgramingCourse {
 
     
       public abstract void setPrerequisites(String prerequisites);
- 
+      public abstract String getPrerequisites();
           
     public void setCourseNumber(String courseNumber) {
         if (courseNumber == null || courseNumber.length() == 0) {
