@@ -5,7 +5,6 @@
  */
 package lab2;
 
-import lab1.*;
 import javax.swing.JOptionPane;
 
 /**

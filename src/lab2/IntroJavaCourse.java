@@ -3,7 +3,7 @@ package lab2;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Chathuri Perera
  * @version     1.00
  */
 public class IntroJavaCourse implements ObjectOrientedProgramming {

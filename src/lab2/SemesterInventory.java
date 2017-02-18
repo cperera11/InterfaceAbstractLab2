@@ -5,8 +5,6 @@
  */
 package lab2;
 
-import lab1.*;
-
 /**
  *
  * @author Chathuri Perera
