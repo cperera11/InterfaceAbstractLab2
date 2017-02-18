@@ -12,6 +12,7 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
 
     private String prerequisites;
     private int numberOfExams;
+     private int numberOfProjects;
     private PrintService printService = new PrintService();
 
     public IntroJavaCourse(String courseName, String courseNumber, String credit, String prereqs) {
@@ -43,6 +44,14 @@ public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
 
     public void setNumberOfExams(int numberOfExams) {
         this.numberOfExams = numberOfExams;
+    }
+
+    public int getNumberOfProjects() {
+        return numberOfProjects;
+    }
+
+    public void setNumberOfProjects(int numberOfProjects) {
+        this.numberOfProjects = numberOfProjects;
     }
     
       

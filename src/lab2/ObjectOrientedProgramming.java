@@ -9,7 +9,7 @@ package lab2;
  *
  * @author CPere
  */
-public interface ObjectOrientedPrograming {
+public interface ObjectOrientedProgramming {
     
     public abstract String getCourseNumber();
 
@@ -17,7 +17,7 @@ public interface ObjectOrientedPrograming {
 
     public abstract double getCredits();
 
-    public abstract void setCredits(double credits);
+    public abstract void setCredits(String credits);
 
     public abstract String getPrerequisites();
 

@@ -17,9 +17,9 @@ public abstract class ObjectOrientedProgramingCourse {
     private String courseNumber;
     private double credits;
     private PrintService printService = new PrintService();
-
     private final String IAEXCEPTION_MSG = "Value Entered Does Not Match the Format of the Field";
 
+    
     public abstract void setPrerequisites(String prerequisites);
 
     public abstract String getPrerequisites();

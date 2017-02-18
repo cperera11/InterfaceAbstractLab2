@@ -8,9 +8,9 @@ package lab1;
  * @version 1.00
  */
 public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
+    
     private int numberOfExams;
-    private int numberOfProjects;
-
+   
     public IntroToProgrammingCourse(String courseName, String courseNumber, String credit, String prereqs) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
@@ -35,13 +35,4 @@ public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
         this.numberOfExams = numberOfExams;
     }
 
-    public int getNumberOfProjects() {
-        return numberOfProjects;
-    }
-
-    public void setNumberOfProjects(int numberOfProjects) {
-        this.numberOfProjects = numberOfProjects;
-    }
-    
-    
-}
+   }

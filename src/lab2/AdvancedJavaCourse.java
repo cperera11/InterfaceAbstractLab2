@@ -5,71 +5,91 @@ import javax.swing.JOptionPane;
 /**
  * Describe responsibilities here.
  *
- * @author      your name goes here
+ * @author      Chathuri Perera
  * @version     1.00
  */
-public class AdvancedJavaCourse {
+public class AdvancedJavaCourse implements ObjectOrientedProgramming {
     private String courseName;
     private String courseNumber;
     private double credits;
     private String prerequisites;
+    private int numberOfProjects;
+    private PrintService printService = new PrintService();
+    private final String IAEXCEPTION_MSG = "Value Entered Does Not Match the Format of the Field";
 
-    public AdvancedJavaCourse(String courseName, String courseNumber) {
-        this.setCourseName(courseName);
-        this.setCourseNumber(courseNumber);
+     public AdvancedJavaCourse(String courseName, String courseNumber, String credit, String prereqs) {
+        setCourseName(courseName);
+        setCourseNumber(courseNumber);
+        setCredits(credit);
+        setPrerequisites(prereqs);
     }
 
+    @Override
     public String getCourseNumber() {
         return courseNumber;
     }
 
-    public final void setCourseNumber(String courseNumber) {
-        if(courseNumber == null || courseNumber.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseNumber cannot be null of empty string");
-            System.exit(0);
+    @Override
+    public void setCourseNumber(String courseNumber) {
+        if (courseNumber == null || courseNumber.length() == 0) {
+            printService.printReport("Error: courseNumber cannot be null of empty string");
+            throw new IllegalArgumentException(IAEXCEPTION_MSG);
         }
         this.courseNumber = courseNumber;
     }
 
+    @Override
     public double getCredits() {
         return credits;
     }
 
-    public void setCredits(double credits) {
-        if(credits < 0.5 || credits > 4.0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: credits must be in the range 0.5 to 4.0");
-            System.exit(0);
+    @Override
+     public void setCredits(String credits) {
+        if (courseNumber == null || courseNumber.length() == 0) {
+            printService.printReport("Error: credits cannot be null of empty");
+            throw new IllegalArgumentException(IAEXCEPTION_MSG);
         }
-        this.credits = credits;
+        Double credit = Double.parseDouble(credits);
+        this.credits = credit;
     }
 
+    @Override
+    public final void setCourseName(String courseName) {
+        if (courseName == null || courseName.length() == 0) {
+            printService.printReport("Error: courseName cannot be null of empty string");
+            throw new IllegalArgumentException(IAEXCEPTION_MSG);
+        }
+        this.courseName = courseName;
+    }
+
+    @Override
     public String getPrerequisites() {
         return prerequisites;
     }
 
+    @Override
     public void setPrerequisites(String prerequisites) {
-        if(prerequisites == null || prerequisites.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: prerequisites cannot be null of empty string");
-            System.exit(0);
+
+        if (prerequisites == null || prerequisites.length() == 0) {
+            printService.printReport("Error: courseName cannot be null of empty string");
+            throw new IllegalArgumentException(IAEXCEPTION_MSG);
         }
         this.prerequisites = prerequisites;
     }
 
+    @Override
     public String getCourseName() {
         return courseName;
     }
 
-    public final void setCourseName(String courseName) {
-        if(courseName == null || courseName.length() == 0) {
-            JOptionPane.showMessageDialog(null,
-                    "Error: courseName cannot be null of empty string");
-            System.exit(0);
-        }
-        this.courseName = courseName;
+    public int getNumberOfProjects() {
+        return numberOfProjects;
     }
+
+    public void setNumberOfProjects(int numberOfProjects) {
+        this.numberOfProjects = numberOfProjects;
+    }
+
 
     
 }
