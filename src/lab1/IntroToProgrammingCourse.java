@@ -10,7 +10,7 @@ package lab1;
 public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
     
     private int numberOfExams;
-   
+     
     public IntroToProgrammingCourse(String courseName, String courseNumber, String credit, String prereqs) {
         setCourseName(courseName);
         setCourseNumber(courseNumber);
@@ -20,6 +20,7 @@ public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
 
     @Override
     public void setPrerequisites(String prerequisites) {
+      
     }
 
     @Override

@@ -20,7 +20,7 @@ public class PrintService {
     }
 
     public void setReport(String text) {
-        this.report += text;
+        this.report = text;
     }
 
     public void printReport(String text) {
