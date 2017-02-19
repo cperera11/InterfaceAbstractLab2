@@ -16,22 +16,22 @@ public class College {
 
     private PrintService printService;
     private SemesterInventory semesterInventory;
-    private final List <ObjectOrientedProgramingCourse> courses;
+    private final List <ObjectOrientedProgramming> courses;
     private String collegeName;
             
           
     public College(String collegeName) {
-        courses = new ArrayList <ObjectOrientedProgramingCourse>();
+        courses = new ArrayList <ObjectOrientedProgramming>();
         setCollegeName(collegeName);
         printService = new PrintService();
         semesterInventory = new SemesterInventory();
     }
 
-    public void addItCourse(ObjectOrientedProgramingCourse course){
+    public void addItCourse(ObjectOrientedProgramming course){
         courses.add(course);
     }
     
-    public List <ObjectOrientedProgramingCourse> getCourses(){
+    public List <ObjectOrientedProgramming> getCourses(){
         return courses;
     }
     

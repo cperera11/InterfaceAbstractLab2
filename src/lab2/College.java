@@ -4,72 +4,58 @@
  * and open the template in the editor.
  */
 package lab2;
+
+import java.util.ArrayList;
+import java.util.List;
+
+
 /**
  *
  * @author Chathuri Perera
  */
 public class College {
 
-    private String collegeName;
-    private IntroToProgrammingCourse introToProgramming;
-    private IntroJavaCourse introToJava;
-    private AdvancedJavaCourse advancedJava;
     private PrintService printService;
     private SemesterInventory semesterInventory;
-
+    private final List <ObjectOrientedProgramming> courses;
+    private String collegeName;
+            
+          
     public College(String collegeName) {
+        courses = new ArrayList <ObjectOrientedProgramming>();
         setCollegeName(collegeName);
         printService = new PrintService();
         semesterInventory = new SemesterInventory();
     }
 
-    public void setIntroPro(String courseName, String courseNumber, String credits, String p) {
-        introToProgramming = new IntroToProgrammingCourse(courseName, courseNumber, credits, p);
-
+    public void addItCourse(ObjectOrientedProgramming course){
+        courses.add(course);
     }
-
-    public void setIntroJava(String courseName, String courseNumber, String credits, String p) {
-        introToJava = new IntroJavaCourse(courseName, courseNumber, credits, introToProgramming.getCourseName());
-
+    
+    public List <ObjectOrientedProgramming> getCourses(){
+        return courses;
     }
-
-    public void setAdvancedJava(String courseName, String courseNumber, String credits, String p) {
-        advancedJava = new AdvancedJavaCourse(courseName, courseNumber, credits, introToJava.getCourseName());
-
-    }
-
-    public void setSemesterInventory() {
-        semesterInventory.setItSemesterInventory("\n"+"Course Name:" + introToProgramming.getCourseName()
-                + "\n\tCourse Number: " + introToProgramming.getCourseNumber()
-                + "\n\tCourse Credits: " + introToProgramming.getCredits()
-                + "\n\tCourse Prerequisites: " + introToProgramming.getPrerequisites());
-
-        semesterInventory.setItSemesterInventory("\n\nCourse Name:" + introToJava.getCourseName()
-                + "\n\tCourse Number: " + introToJava.getCourseNumber()
-                + "\n\tCourse Credits: " + introToJava.getCredits()
-                + "\n\tCourse Prerequisites: " + introToJava.getPrerequisites());
-
-        semesterInventory.setItSemesterInventory("\n\nCourse Name:" + advancedJava.getCourseName()
-                + "\n\tCourse Number: " + advancedJava.getCourseNumber()
-                + "\n\tCourse Credits: " + advancedJava.getCredits()
-                + "\n\tCourse Prerequisites: " + advancedJava.getPrerequisites());
-
-    }
-
-    public void printReport() {
+    
+     public void setSemesterInventory() {
+         courses.forEach((c) -> {
+             semesterInventory.setItSemesterInventory("\n"+"Course Name:" + c.getCourseName()
+                     + "\n\tCourse Number: " +c.getCourseNumber()
+                     + "\n\tCourse Credits: " + c.getCredits()
+                     + "\n\tCourse Prerequisites: " + c.getPrerequisites() + "\n");
+        });
+     }
+    
+    public void printSemesterInventory() {
         setSemesterInventory();
-        printService.printReport(semesterInventory.getINVENTORY_MSG() +" of " + getCollegeName() + "\n" 
-                                    + semesterInventory.getItSemesterInventory());
+        printService.printReport(semesterInventory.getINVENTORY_MSG() +" of " + getCollegeName()+"\n"
+                + semesterInventory.getItSemesterInventory());
     }
 
     public String getCollegeName() {
-        return collegeName;
+         return collegeName;
     }
 
     public void setCollegeName(String collegeName) {
         this.collegeName = collegeName;
     }
-    
-    
-
 }

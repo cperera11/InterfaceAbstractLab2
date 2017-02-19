@@ -5,6 +5,8 @@
  */
 package lab2;
 
+import lab1.ObjectOrientedProgramming;
+
 /**
  *
  * @author Chathuri Perera
@@ -14,23 +16,30 @@ public class Startup {
     public static void main(String[] args) {
 
         College wctc = new College("WCTC");
+        IntroToProgrammingCourse introProgramming = new IntroToProgrammingCourse("Intro to Programming", "152-107", "2", "prerequisites");
+        IntroJavaCourse introJava = new IntroJavaCourse("Intro to Java", "152-134", "4", introProgramming.getCourseName());       
+        AdvancedJavaCourse advancedJava = new AdvancedJavaCourse("Advanced Java", "152-135", "4", introJava.getCourseName()); 
+        
+        wctc.addItCourse(introProgramming);
+        wctc.addItCourse(introJava);
+        wctc.addItCourse(advancedJava);
+      
+        College carroll = new College("Carroll University");
+        IntroToProgrammingCourse introToProgramming = new IntroToProgrammingCourse("Introduction to Programming", "230-48", "2", "prerequisites");
+        IntroJavaCourse introToJava = new IntroJavaCourse("Introduction to Java", "230-66", "3", introProgramming.getCourseName());    
+        AdvancedJavaCourse advancedJavaProgramme = new AdvancedJavaCourse("Advanced Java Programming", "230-69", "4", introJava.getCourseName());
 
-        wctc.setIntroPro("Intro to Programming", "152-107", "2", "prerequisites");
-        wctc.setIntroJava("Intro to Java", "152-134", "4", "prerequisites");
-        wctc.setAdvancedJava("Advanced Java", "152-135", "4", "prerequisites");
-   
+        carroll.addItCourse(introToProgramming );
+        carroll.addItCourse(introToJava );
+        carroll.addItCourse(advancedJavaProgramme);
         
-        College uwm = new College("UWM");
-        uwm.setIntroPro("Introduction to Object-Oriented Programming", "CS 550", "2", "prerequisites");
-        uwm.setIntroJava(" Object-Oriented Programming", "CS 552", "3", "prerequisites");
-        uwm.setAdvancedJava("Advanced Object-Oriented Programming", "CS 553", "4", "prerequisites");
-  
         
-        College[] college = {wctc, uwm};
+        College[] college = {wctc, carroll};
 
         for (College col : college) {
-            col.printReport();
+            col.printSemesterInventory();
         }
 
+        
     }
 }

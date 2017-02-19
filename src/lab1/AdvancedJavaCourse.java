@@ -6,7 +6,7 @@ package lab1;
  * @author Chathuri Perera
  * @version 1.00
  */
-public class AdvancedJavaCourse extends ObjectOrientedProgramingCourse {
+public class AdvancedJavaCourse extends ObjectOrientedProgramming {
 
     private String prerequisites;
     private int numberOfProjects;

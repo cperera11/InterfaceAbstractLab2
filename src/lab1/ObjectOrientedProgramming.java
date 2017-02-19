@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
  *
  * @author Chathuri Perera
  */
-public abstract class ObjectOrientedProgramingCourse {
+public abstract class ObjectOrientedProgramming {
 
     private String courseName;
     private String courseNumber;

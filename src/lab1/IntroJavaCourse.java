@@ -8,7 +8,7 @@ package lab1;
  * @author      Chathuri Perera
  * @version     1.00
  */
-public class IntroJavaCourse extends ObjectOrientedProgramingCourse {
+public class IntroJavaCourse extends ObjectOrientedProgramming {
 
     private String prerequisites;
     private int numberOfExams;

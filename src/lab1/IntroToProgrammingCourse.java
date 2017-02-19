@@ -7,7 +7,7 @@ package lab1;
  * @author Chathuri Perera
  * @version 1.00
  */
-public class IntroToProgrammingCourse extends ObjectOrientedProgramingCourse {
+public class IntroToProgrammingCourse extends ObjectOrientedProgramming {
     
     private int numberOfExams;
      
